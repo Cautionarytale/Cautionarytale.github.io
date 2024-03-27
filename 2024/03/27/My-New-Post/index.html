@@ -9,7 +9,7 @@
   <meta name="description" content="山东大学   计算机科学与技术   学院   云计算技术   课程实验报告 学号：202100130127	姓名： 刘宁	班级： 4实验题目：利用主流云平台搭建个人博客或网站实验学时：2	实验日期：    2024&#x2F;3&#x2F;27实验目的：熟悉使用主流云平台并搭建个人博客或者网站。具体包括：参考方案：基于主流云平台，设计、实现个人博客或者网站的搭建，撰写实验报告（附带网站链接并可以访">
 <meta property="og:type" content="article">
 <meta property="og:title" content="My New Post">
-<meta property="og:url" content="http://example.com/2024/03/27/My-New-Post/index.html">
+<meta property="og:url" content="https://cautionarytale.github.io/2024/03/27/My-New-Post/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="山东大学   计算机科学与技术   学院   云计算技术   课程实验报告 学号：202100130127	姓名： 刘宁	班级： 4实验题目：利用主流云平台搭建个人博客或网站实验学时：2	实验日期：    2024&#x2F;3&#x2F;27实验目的：熟悉使用主流云平台并搭建个人博客或者网站。具体包括：参考方案：基于主流云平台，设计、实现个人博客或者网站的搭建，撰写实验报告（附带网站链接并可以访">
 <meta property="og:locale" content="en_US">
@@ -64,7 +64,7 @@
         <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cautionarytale.github.io"></form>
       </div>
     </div>
   </div>
@@ -105,14 +105,14 @@
 <ol start="2">
 <li>连接 Github<br>使用邮箱注册 GitHub 账户，选择免费账户（Free），并完成邮件验证。<br>右键 -&gt; Git Bash Here，设置用户名和邮箱：<br>git config –global user.name “GitHub 用户名”<br>git config –global user.email “GitHub 邮箱”<br>创建 SSH 密匙：<br>输入 ssh-keygen -t rsa -C “GitHub 邮箱”，然后一路回车。<br>添加密匙：<br>进入 [C:\Users\用户名.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥 id_rsa.pub 文件并复制里面的内容。<br>登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。<br>Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。</li>
 </ol>
-<p>验证连接：<br>打开 Git Bash，输入 ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;</a> 出现 “Are you sure……”，输入 yes 回车确认。</p>
+<p>验证连接：<br>打开 Git Bash，输入 ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#109;</a> 出现 “Are you sure……”，输入 yes 回车确认。</p>
 <p>显示 “Hi xxx! You’ve successfully……” 即连接成功。<br>3. 创建 Github Pages 仓库<br>GitHub 主页右上角加号 -&gt; New repository：<br>Repository name 中输入 用户名.github.io<br>勾选 “Initialize this repository with a README”<br>Description 选填<br>填好后点击 Create repository 创建。</p>
 <p>创建后默认自动启用 HTTPS，博客地址为：https:&#x2F;&#x2F;用户名.github.io<br>4. 本地安装 Hexo 博客程序<br>新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog。打开该文件夹，右键 -&gt; Git Bash Here。</p>
 <h1 id="4-1-安装-Hexo"><a href="#4-1-安装-Hexo" class="headerlink" title="4.1 安装 Hexo"></a>4.1 安装 Hexo</h1><p>使用 npm 一键安装 Hexo 博客程序：<br>npm install -g hexo-cli<br>Mac 用户需要管理员权限（sudo），运行这条命令：<br>sudo npm install -g hexo-cli<br>安装时间有点久（真的很慢！），界面也没任何反应，耐心等待，安装完成后如下图。</p>
 <h1 id="4-2-Hexo-初始化和本地预览"><a href="#4-2-Hexo-初始化和本地预览" class="headerlink" title="4.2 Hexo 初始化和本地预览"></a>4.2 Hexo 初始化和本地预览</h1><p>初始化并安装所需组件：<br>hexo init      # 初始化<br>npm install    # 安装组件<br>完成后依次输入下面命令，启动本地服务器进行预览：<br>hexo g   # 生成页面<br>hexo s   # 启动预览<br>访问 <a href="http://localhost:4000，出现">http://localhost:4000，出现</a> Hexo 默认页面，本地博客安装成功！</p>
 <p>Tips：如果出现页面加载不出来，可能是端口被占用了。Ctrl+C 关闭服务器，运行 hexo server -p 5000 更改端口号后重试。<br>Hexo 博客文件夹目录结构如下：</p>
 <ol start="5">
-<li>部署 Hexo 到 GitHub Pages<br>本地博客测试成功后，就是上传到 GitHub 进行部署，使其能够在网络上访问。<br>首先安装 hexo-deployer-git：<br>npm install hexo-deployer-git –save<br>然后修改 _config.yml 文件末尾的 Deployment 部分，修改成如下：<br>deploy:<br>  type: git<br>  repository: <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;</a>:用户名&#x2F;用户名.github.io.git<br>  branch: master<br>完成后运行 hexo d 将网站上传部署到 GitHub Pages。<br>完成！这时访问我们的 GitHub 域名 https:&#x2F;&#x2F;用户名.github.io 就可以看到 Hexo 网站了。</li>
+<li>部署 Hexo 到 GitHub Pages<br>本地博客测试成功后，就是上传到 GitHub 进行部署，使其能够在网络上访问。<br>首先安装 hexo-deployer-git：<br>npm install hexo-deployer-git –save<br>然后修改 _config.yml 文件末尾的 Deployment 部分，修改成如下：<br>deploy:<br>  type: git<br>  repository: <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a>:用户名&#x2F;用户名.github.io.git<br>  branch: master<br>完成后运行 hexo d 将网站上传部署到 GitHub Pages。<br>完成！这时访问我们的 GitHub 域名 https:&#x2F;&#x2F;用户名.github.io 就可以看到 Hexo 网站了。</li>
 </ol>
 <p>结论分析与体会：</p>
 <p>了解了云平台上个人博客搭建的基本方法。</p>
@@ -120,7 +120,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/27/My-New-Post/" data-id="clu9idkm10000coma0qned6sc" data-title="My New Post" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://cautionarytale.github.io/2024/03/27/My-New-Post/" data-id="clu9iid4000006gma2m2u7p91" data-title="My New Post" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
